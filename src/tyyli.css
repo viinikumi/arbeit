@@ -1,0 +1,337 @@
+.paivainput {
+  width: 110px;
+  background-color: transparent;
+}
+
+.haeNappi {
+  padding: 11px;
+  background-color: transparent;
+  border: 0.5px solid white;
+  color: white;
+  border-radius: 0px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 38px;
+}
+
+nav {
+  position: fixed;
+  width: 350px;
+  top: 570px;
+  font-size: 16px;
+  text-align: center;
+  left: 0px;
+  border-top: 0.5px solid rgb(2, 2, 2);
+  z-index: 3;
+
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.boxi {
+  position: fixed;
+  height: 600px;
+  width: 350px;
+  background-color: white;
+  z-index: -2;
+}
+
+.nollaus {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 150px;
+  height: 19px;
+  margin-left: 100px;
+  margin-top: 25px;
+  border: 1px solid black;
+  font-weight: 900;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.reset {
+  margin-left: 25px;
+  font-size: 18px;
+  margin-top: -25px;
+  text-indent: 0;
+  font-weight: 3000;
+  font-style: oblique;
+  color: rgb(255, 255, 255);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+}
+
+.alapalk {
+  height: 31px;
+  width: 350px;
+  position: fixed;
+  margin-top: 570px;
+  background-color: rgb(91, 91, 156);
+}
+
+.ylapalk {
+  height: 20px;
+  width: 350px;
+  position: fixed;
+  background-color: rgb(91, 91, 156);
+}
+.rak {
+  color: white;
+  margin-top: 33px;
+  margin-left: 40px;
+}
+
+.laatikot {
+  width: 60px;
+  height: 20px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding: 0px;
+  font-size: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 1px solid rgb(54, 51, 51);
+}
+
+.laatikot2 {
+  width: 60px;
+  height: 20px;
+  background-color: rgb(184, 56, 139);
+  color: black;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding: 0px;
+  font-size: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgb(54, 51, 51);
+}
+
+.Alueetbox {
+  height: 550px;
+  width: 330px;
+
+  margin-left: 10px;
+  margin-top: 19px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+.siipiotsikko {
+  width: 60px;
+  justify-content: center;
+  display: flex;
+  font-size: 15px;
+
+  color: rgb(2, 2, 2);
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-weight: 900;
+}
+
+.alueetB {
+  margin-top: 5px;
+  margin-left: 1px;
+  width: 60px;
+  padding: 3px;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  align-items: center;
+}
+.alueetL {
+  margin-left: 1px;
+  margin-top: 7px;
+  width: 60px;
+  padding: 3px;
+  background-color: lightgrey;
+
+  display: flex;
+  flex-direction: column;
+  border-radius: 1%;
+  /* border-style: groove; */
+  align-items: center;
+  position: relative;
+  order: 4;
+}
+.alueetN {
+  margin-top: 31px;
+  margin-left: 1px;
+  width: 60px;
+  padding: 3px;
+  border-radius: 1%;
+  align-items: center;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-around;
+  background-color: bisque;
+
+  /* border-style: groove; */
+  order: 3;
+  position: relative;
+}
+.alueetT {
+  margin-top: 32px;
+  margin-left: 1px;
+  width: 60px;
+  padding: 3px;
+
+  background-color: rgb(137, 165, 189); /* border-style: groove; */
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-around;
+  order: 2;
+}
+
+.alueetD {
+  margin-top: 7px;
+  margin-left: 1px;
+  width: 60px;
+  padding: 3px;
+
+  background-color: cornflowerblue;
+  align-items: center;
+  /* border-style: groove; */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-around;
+  order: 4;
+}
+
+.laatikot:hover {
+  background-color: rgb(230, 149, 174);
+}
+.alueetR {
+  margin-left: 1px;
+  margin-top: 13px;
+  width: 60px;
+  padding: 3px;
+
+  display: flex;
+  flex-direction: column;
+  /* border-style: groove; */
+  align-items: center;
+  background-color: coral;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-around;
+  order: 11;
+}
+
+.alueetK {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 1px;
+  margin-top: 5px;
+  width: 60px;
+  padding: 3px;
+
+  background-color: hotpink;
+  /* border-style: groove; */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-around;
+  order: 5;
+}
+
+.alueetCOXA {
+  margin-left: 1px;
+  margin-top: 11px;
+  width: 60px;
+  padding: 3px;
+
+  background-color: lightskyblue;
+  /* border-style: groove; */
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-around;
+  order: 8;
+}
+.alueetE {
+  margin-left: 1px;
+  margin-top: 5px;
+  width: 60px;
+  padding: 3px;
+
+  /* border-style: groove; */
+  align-items: center;
+  background-color: lightpink;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-around;
+  order: 1;
+}
+
+.alueetFM1 {
+  margin-top: 12px;
+  margin-left: 1px;
+  width: 60px;
+  padding: 3px;
+
+  /* border-style: groove; */
+  background-color: plum;
+  align-items: center;
+
+  position: relative;
+  justify-content: space-around;
+  order: 6;
+  display: flex;
+  flex-direction: column;
+}
+
+.alueetFM6 {
+  margin-left: 1px;
+  margin-top: 10px;
+  width: 60px;
+  padding: 3px;
+
+  /* border-style: groove; */
+  align-items: center;
+  background-color: rgb(213, 234, 192);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-around;
+  order: 2;
+}
+
+.alueetF {
+  margin-left: 1px;
+  margin-top: 11px;
+  width: 60px;
+  padding: 3px;
+
+  /* border-style: groove; */
+  align-items: center;
+  background-color: khaki;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-around;
+  order: 10;
+}
