@@ -1,66 +1,62 @@
+// B_siipi.js
 import { useState, useEffect } from "react";
-import { initializeApp } from "firebase/app";
-import { getDatabase, ref, get, set } from "firebase/database";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { ref, get, set } from "firebase/database";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth, database } from "../firebaseConfig"; // Tuo auth ja database
 import { siipi_switch } from "./funk_vaunut/siipi_switch";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyCoPYss0jsMH3q9PDzzMmABAfhy125Yf2Q",
-  authDomain: "sikala-d0060.firebaseapp.com",
-  databaseURL:
-    "https://sikala-d0060-default-rtdb.europe-west1.firebasedatabase.app/",
-  projectId: "sikala-d0060",
-  storageBucket: "sikala-d0060.appspot.com",
-  messagingSenderId: "881281568551",
-  appId: "1:881281568551:web:841dbebb613333c9dbe302",
-};
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const database = getDatabase(app);
 
 const B_siipi = () => {
   const [osastot, setOsastot] = useState({});
   const [haetaan, setHaetaan] = useState(true);
 
-  // Asynkroninen funktio tietojen hakemiseksi
-  const hae = async () => {
-    try {
-      const user = auth.currentUser;
-      if (user) {
-        const idToken = await user.getIdToken(); // Ei ole pakollinen, mutta voi olla tarpeen
-        const dbRef = ref(database, "/");
-        const snapshot = await get(dbRef);
-        if (snapshot.exists()) {
-          setOsastot(snapshot.val());
-        } else {
-          console.log("No data available");
-        }
-      } else {
-        console.log("User not signed in");
-      }
-      setHaetaan(false);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-      setHaetaan(false);
-    }
-  };
-
-  // Käynnistä hae-funktio komponentin latauksen yhteydessä
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        hae();
+        hae(); // Kutsu hae-funktiota, jos käyttäjä on kirjautunut sisään
       } else {
         console.log("User not signed in");
         setHaetaan(false);
       }
     });
 
-    return () => unsubscribe(); // Cleanup subscription
+    return () => unsubscribe(); // Cleanup subscription on unmount
   }, []);
 
-  // Funktio resetoinnille
-  const reset = async () => {
+  const hae = async () => {
+    try {
+      const dbRef = ref(database, "/");
+      const snapshot = await get(dbRef);
+      if (snapshot.exists()) {
+        setOsastot(snapshot.val());
+        setHaetaan(false);
+      } else {
+        console.log("No data available");
+        setHaetaan(false);
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      setHaetaan(false);
+    }
+  };
+
+  // Lähetä data osastojen muuttuessa
+  useEffect(() => {
+    const laheta = async () => {
+      try {
+        const dbRef = ref(database, "/");
+        await set(dbRef, osastot);
+        console.log("Data sent successfully");
+      } catch (error) {
+        console.error("Error sending data:", error);
+      }
+    };
+
+    if (Object.keys(osastot).length > 0) {
+      laheta();
+    }
+  }, [osastot]);
+
+  const reset = () => {
     let kopioOsastot = { ...osastot };
 
     Object.keys(kopioOsastot).forEach((rakennus) => {
@@ -71,20 +67,8 @@ const B_siipi = () => {
     });
 
     setOsastot(kopioOsastot);
-    await laheta();
   };
 
-  // Funktio tietojen lähettämiselle
-  const laheta = async () => {
-    try {
-      const dbRef = ref(database, "/");
-      await set(dbRef, osastot);
-    } catch (error) {
-      console.error("Error sending data:", error);
-    }
-  };
-
-  // Funktio merkinnän käsittelemiseksi
   const merkinta = (event) => {
     let nro = event.target.id;
     let siipi = siipi_switch(nro);

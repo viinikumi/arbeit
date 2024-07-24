@@ -21,8 +21,11 @@ const Signup = () => {
 
   return (
     <div style={{ marginTop: "55px" }}>
-      <h2>Signup</h2>
-      <form onSubmit={handleSignup} className="logForm">
+      <form
+        onSubmit={handleSignup}
+        className="logForm"
+        style={{ marginTop: "95px" }}
+      >
         <div>
           <label>Email:</label>
           <input
