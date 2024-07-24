@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./tyyliVH.css";
-
+import "../tyyli.css";
 import { AgGridReact } from "ag-grid-react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
@@ -213,15 +213,17 @@ const Vuorohaku = () => {
       <AppBar
         position="static"
         style={{
-          width: 350,
-          height: 90,
+          width: "350px",
+          height: "90px",
           backgroundColor: "rgb(91, 91, 156)",
         }}
       >
-        <Toolbar>
+        <Toolbar
+          style={{ borderBottom: "0.5px solid white", marginTop: "-2px" }}
+        >
           <Typography variant="h7"></Typography>
           <KellonAika />
-          <div style={{ marginLeft: "65px", fontSize: "14px" }}>
+          <div style={{ marginLeft: "100px", fontSize: "12px" }}>
             kiertonumero: {kiertonumero}
           </div>
         </Toolbar>

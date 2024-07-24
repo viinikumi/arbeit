@@ -14,9 +14,6 @@ export const siipi_switch = (nro) => {
     case nro >= 21 && nro < 34:
       siipi = "T";
       break;
-    case nro === 34:
-      siipi = "FM6";
-      break;
     case nro >= 35 && nro < 40:
       siipi = "D";
       break;
@@ -32,8 +29,14 @@ export const siipi_switch = (nro) => {
     case nro >= 48 && nro < 50:
       siipi = "E";
       break;
-    case 49 < nro < 52:
+    case nro >= 50 && nro < 52:
       siipi = "R";
+      break;
+    case nro == 52:
+      siipi = "FM6";
+      break;
+    case nro == 53:
+      siipi = "F";
       break;
 
     default:

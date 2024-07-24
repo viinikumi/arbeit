@@ -1,9 +1,114 @@
+.fullscreen {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute; /* Varmistaa, että se ei vaikuta muuhun sisältöön */
+  top: 0;
+  left: 0;
+  margin: 0; /* Poistaa mahdolliset marginaalit */
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.logOtsikko {
+  color: black;
+  margin-left: 20px;
+}
+
+.log {
+  background-color: transparent;
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
+  display: flex;
+  position: absolute;
+}
+
+.logInOut {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: row;
+
+  align-content: space-around;
+}
+.logBut {
+  color: red;
+  font-size: 12px;
+  font-weight: 600;
+  order: 3;
+  position: static;
+  background-color: transparent;
+
+  margin-bottom: 20px;
+  margin-left: -5px;
+  margin-top: 25px;
+}
+
+.logInputPw {
+  height: 30px;
+  width: 120px;
+  background-color: transparent;
+  color: black;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(91, 91, 156);
+}
+
+.logInputMail {
+  height: 30px;
+  width: 120px;
+  position: relative;
+  margin-left: -10px;
+  background-color: transparent;
+  color: black;
+  border-radius: 5px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(91, 91, 156);
+}
+
+.logForm {
+  display: flex;
+  padding: 25px;
+  position: absolute;
+  flex-direction: row;
+  height: 20px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+}
+
+.jemma {
+  height: 31px;
+  width: 351px;
+  position: fixed;
+  margin-top: 0px;
+  background-color: rgb(91, 91, 156);
+}
+.fullscreen {
+  height: 100vh; /* CSS:llä asetettu korkeus */
+  overflow: hidden;
+}
+
 .paivainput {
   width: 110px;
+  height: 40px;
+  border: 0.5px solid white;
   background-color: transparent;
+  text-align: center;
+  margin-left: -5px;
 }
 
 .haeNappi {
+  height: 43px;
   padding: 11px;
   background-color: transparent;
   border: 0.5px solid white;
@@ -11,7 +116,7 @@
   border-radius: 0px;
   cursor: pointer;
   font-size: 16px;
-  margin-left: 38px;
+  margin-left: 0px;
 }
 
 nav {
@@ -28,11 +133,15 @@ nav {
 }
 
 .boxi {
+  height: 100vh; /* CSS:llä asetettu korkeus */
+  overflow: hidden; /* kokeilu */
   position: fixed;
   height: 600px;
   width: 350px;
   background-color: white;
   z-index: -2;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 }
 
 .nollaus {
@@ -64,7 +173,7 @@ nav {
 
 .alapalk {
   height: 31px;
-  width: 350px;
+  width: 351px;
   position: fixed;
   margin-top: 570px;
   background-color: rgb(91, 91, 156);
@@ -75,6 +184,8 @@ nav {
   width: 350px;
   position: fixed;
   background-color: rgb(91, 91, 156);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 }
 .rak {
   color: white;
@@ -151,6 +262,7 @@ nav {
   display: flex;
   flex-direction: column;
   position: relative;
+  border-top-left-radius: 5px;
 
   align-items: center;
 }
@@ -254,6 +366,7 @@ nav {
   position: relative;
   justify-content: space-around;
   order: 5;
+  border-top-right-radius: 5px;
 }
 
 .alueetCOXA {
@@ -317,7 +430,7 @@ nav {
   flex-direction: column;
   position: relative;
   justify-content: space-around;
-  order: 2;
+  order: 3;
 }
 
 .alueetF {
