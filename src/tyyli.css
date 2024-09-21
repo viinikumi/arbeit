@@ -1,0 +1,641 @@
+@import url("muuttuvat.css");
+
+a {
+  font-weight: 500;
+  color: var(--teksti);
+  text-decoration: inherit;
+  font-size: 14px;
+}
+a:hover {
+  font-weight: 1000;
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.logOtsikko {
+  color: black;
+  margin-left: 20px;
+  position: fixed;
+}
+
+.log {
+  background-color: transparent;
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
+  display: flex;
+  position: absolute;
+  margin-top: -5px;
+}
+
+.logInOut {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: row;
+  align-content: space-around;
+}
+.logBut {
+  color: red;
+  font-size: 12px;
+  font-weight: 600;
+  order: 3;
+  position: static;
+  background-color: transparent;
+
+  margin-bottom: 20px;
+  margin-left: -5px;
+  margin-top: 0px;
+}
+
+.logInputPw {
+  height: 30px;
+  width: 120px;
+  background-color: transparent;
+  color: black;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  border: 1px solid var(--primary);
+}
+
+.logInputMail {
+  height: 30px;
+  width: 120px;
+  position: relative;
+  margin-left: 0px;
+  background-color: transparent;
+  color: black;
+  border-radius: 5px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  border: 1px solid var(--primary);
+}
+
+.logForm {
+  display: flex;
+  margin-left: 30px;
+  width: 300px;
+  padding: 0px;
+  position: fixed;
+  margin-top: 150px;
+  flex-direction: row;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullscreen {
+  height: 100vh; /* CSS:llä asetettu korkeus */
+  overflow: hidden;
+}
+
+.vHaku {
+  display: flex;
+  position: fixed;
+  margin-top: -20px;
+  z-index: 7;
+}
+
+.paivainput {
+  color: white;
+  width: 110px;
+  height: 40px;
+  border: 0.5px solid white;
+  background-color: transparent;
+  text-align: center;
+  margin-left: -5px;
+  position: static;
+  z-index: 7;
+}
+
+.haeNappi {
+  height: 43px;
+  padding: 11px;
+  position: static;
+  background-color: transparent;
+  border: 0.5px solid white;
+  color: white;
+  border-radius: 0px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 0px;
+  margin-top: 0px;
+  z-index: 7;
+}
+
+nav {
+  bottom: 0;
+  position: fixed;
+  width: 350px;
+  height: 30px;
+  bottom: 0px;
+  font-size: 16px;
+  text-align: center;
+  left: 0px;
+  border-top: 0.5px solid rgb(2, 2, 2);
+  z-index: 13;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.boxi {
+  height: 100vh; /* CSS:llä asetettu korkeus */
+  overflow: hidden; /* kokeilu */
+  position: fixed;
+  max-height: 600px;
+
+  width: 350px;
+  background-color: white;
+  z-index: -2;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.kellokierto {
+  position: fixed;
+  display: flex;
+  width: 350px;
+  height: 25px;
+  margin-top: 495px;
+  color: black;
+  align-items: center;
+  margin-left: 5px;
+  z-index: 8;
+}
+
+.kierto {
+  position: static;
+  font: 12px;
+  margin-left: 15px;
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.KellonAika {
+  position: fixed;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  position: static;
+  margin-left: 20px;
+  margin-right: 5px;
+  margin-top: 20px;
+  font-weight: 500;
+
+  width: 170px;
+  height: 15px;
+}
+.alasVeto {
+  font-size: 12px;
+  width: 105px;
+  height: 42px;
+  background-color: transparent;
+  color: white;
+  margin-left: 36px;
+  border: 0.5px solid white;
+  text-align: left;
+  position: static;
+  z-index: 7;
+}
+
+.nollaus {
+  color: black;
+  position: fixed;
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 150px;
+  height: 19px;
+  margin-left: 100px;
+  margin-top: 35px;
+  border: 1px solid black;
+  font-weight: 900;
+  z-index: 4;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.reset {
+  margin-left: 25px;
+  font-size: 18px;
+  margin-top: -14px;
+  text-indent: 0;
+  font-weight: 3000;
+  font-style: oblique;
+  color: rgb(255, 255, 255);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  z-index: 7;
+}
+
+.alapalk {
+  height: 31px;
+  width: 350px;
+  position: fixed;
+  bottom: 0;
+  left: 0%;
+  background-color: var(--primary);
+  z-index: 10;
+  /*{bottom: calc(min(0px, 700px - 100vh));}*/
+}
+
+.aladiv {
+  background-color: var(--primary);
+  width: 350px;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  max-height: 15vh;
+  font-size: 12px;
+  color: white;
+  margin-top: 590px;
+}
+
+.varit {
+  position: static;
+  height: 30px;
+  width: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 50px;
+  margin-top: 16px;
+
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+}
+.vari0 {
+  height: 20px;
+  width: 20px;
+  border: 0.5px solid white;
+  border-radius: 100%;
+  margin-left: 2px;
+  margin-top: 2px;
+  background-color: rgb(115, 147, 179);
+  z-index: 7;
+  display: flex;
+  position: static;
+  border: 0.5px solid white;
+}
+.vari1 {
+  height: 20px;
+  width: 20px;
+  border: 0.5px solid white;
+  border-radius: 100%;
+  margin-left: 2px;
+  margin-top: 2px;
+  background-color: rgb(0, 71, 171);
+  z-index: 7;
+  display: flex;
+  position: static;
+  border: 0.5px solid white;
+}
+.vari2 {
+  height: 20px;
+  width: 20px;
+  border: 0.5px solid white;
+  border-radius: 100%;
+  margin-left: 2px;
+  margin-top: 2px;
+  background-color: rgb(0, 255, 255);
+  z-index: 7;
+  display: flex;
+  position: static;
+  border: 0.5px solid white;
+}
+.vari3 {
+  height: 20px;
+  width: 20px;
+  border: 0.5px solid white;
+  border-radius: 100%;
+  margin-left: 2px;
+  margin-top: 2px;
+  background-color: rgb(53, 57, 53);
+  z-index: 7;
+  display: flex;
+  position: static;
+  border: 0.5px solid white;
+}
+.vari4 {
+  height: 20px;
+  width: 20px;
+  border: 0.5px solid white;
+  border-radius: 100%;
+  margin-left: 2px;
+  margin-top: 2px;
+  background-color: rgb(37, 199, 75);
+  z-index: 7;
+  display: flex;
+  position: static;
+  border: 0.5px solid white;
+}
+.vari5 {
+  height: 20px;
+  width: 20px;
+  border: 0.5px solid white;
+  border-radius: 100%;
+  margin-left: 2px;
+  margin-top: 2px;
+  background-color: rgb(204, 204, 255);
+  z-index: 7;
+  display: flex;
+  position: static;
+  border: 0.5px solid white;
+}
+.jemma {
+  height: 31px;
+  width: 350px;
+  bottom: 0;
+  left: 0%;
+  position: fixed;
+  margin-top: 0px;
+  background-color: var(--primary);
+  z-index: 11;
+}
+.ylapalk {
+  height: 20px;
+  width: 350px;
+  position: fixed;
+  background-color: var(--primary);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  z-index: 6;
+}
+.rak {
+  color: white;
+  margin-top: 33px;
+  margin-left: 40px;
+}
+
+.laatikot {
+  width: 60px;
+  height: 20px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding: 0px;
+  font-size: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 1px solid rgb(54, 51, 51);
+}
+
+.laatikot2 {
+  width: 60px;
+  height: 20px;
+  background-color: rgb(184, 56, 139);
+  color: black;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding: 0px;
+  font-size: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgb(54, 51, 51);
+}
+
+.Alueetbox {
+  height: 550px;
+  width: 330px;
+
+  margin-left: 10px;
+  margin-top: 19px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+.siipiotsikko {
+  width: 60px;
+  justify-content: center;
+  display: flex;
+  font-size: 15px;
+
+  color: rgb(2, 2, 2);
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-weight: 900;
+}
+
+.alueetB {
+  margin-top: 5px;
+  margin-left: 1px;
+  width: 60px;
+  padding: 3px;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-top-left-radius: 5px;
+
+  align-items: center;
+}
+.alueetL {
+  margin-left: 1px;
+  margin-top: 7px;
+  width: 60px;
+  padding: 3px;
+  background-color: lightgrey;
+
+  display: flex;
+  flex-direction: column;
+  border-radius: 1%;
+  /* border-style: groove; */
+  align-items: center;
+  position: relative;
+  order: 4;
+}
+.alueetN {
+  margin-top: 31px;
+  margin-left: 1px;
+  width: 60px;
+  padding: 3px;
+  border-radius: 1%;
+  align-items: center;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-around;
+  background-color: bisque;
+
+  /* border-style: groove; */
+  order: 3;
+  position: relative;
+}
+.alueetT {
+  margin-top: 32px;
+  margin-left: 1px;
+  width: 60px;
+  padding: 3px;
+
+  background-color: rgb(137, 165, 189); /* border-style: groove; */
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-around;
+  order: 2;
+}
+
+.alueetD {
+  margin-top: 7px;
+  margin-left: 1px;
+  width: 60px;
+  padding: 3px;
+
+  background-color: cornflowerblue;
+  align-items: center;
+  /* border-style: groove; */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-around;
+  order: 4;
+}
+
+.laatikot:hover {
+  background-color: rgb(230, 149, 174);
+}
+.alueetR {
+  margin-left: 1px;
+  margin-top: 13px;
+  width: 60px;
+  padding: 3px;
+
+  display: flex;
+  flex-direction: column;
+  /* border-style: groove; */
+  align-items: center;
+  background-color: coral;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-around;
+  order: 11;
+}
+
+.alueetK {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 1px;
+  margin-top: 5px;
+  width: 60px;
+  padding: 3px;
+
+  background-color: hotpink;
+  /* border-style: groove; */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-around;
+  order: 5;
+  border-top-right-radius: 5px;
+}
+
+.alueetCOXA {
+  margin-left: 1px;
+  margin-top: 11px;
+  width: 60px;
+  padding: 3px;
+
+  background-color: lightskyblue;
+  /* border-style: groove; */
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-around;
+  order: 8;
+}
+.alueetE {
+  margin-left: 1px;
+  margin-top: 5px;
+  width: 60px;
+  padding: 3px;
+
+  /* border-style: groove; */
+  align-items: center;
+  background-color: lightpink;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-around;
+  order: 1;
+}
+
+.alueetFM1 {
+  margin-top: 12px;
+  margin-left: 1px;
+  width: 60px;
+  padding: 3px;
+
+  /* border-style: groove; */
+  background-color: plum;
+  align-items: center;
+
+  position: relative;
+  justify-content: space-around;
+  order: 6;
+  display: flex;
+  flex-direction: column;
+}
+
+.alueetFM6 {
+  margin-left: 1px;
+  margin-top: 10px;
+  width: 60px;
+  padding: 3px;
+
+  /* border-style: groove; */
+  align-items: center;
+  background-color: rgb(213, 234, 192);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-around;
+  order: 3;
+}
+
+.alueetF {
+  margin-left: 1px;
+  margin-top: 11px;
+  width: 60px;
+  padding: 3px;
+
+  /* border-style: groove; */
+  align-items: center;
+  background-color: khaki;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-around;
+  order: 10;
+}
+.ag-theme-material .ag-row {
+  margin: 0;
+}

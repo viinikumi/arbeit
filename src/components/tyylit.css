@@ -1,0 +1,160 @@
+@import url("../muuttuvat.css");
+
+td:nth-child(even),
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 315px;
+  height: 50px;
+  margin-top: 5px;
+  margin-left: 7px;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 14px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.x {
+  font-size: 18px;
+  font-weight: 800;
+  position: fixed;
+  margin-left: 12px;
+  color: white;
+}
+
+.kehys {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  border: 0.5px solid white;
+  background-color: bisque;
+  color: black;
+  position: fixed;
+  z-index: 3;
+  align-items: center;
+  justify-content: center;
+}
+
+.harmaaL {
+  z-index: 8;
+  height: 550px;
+  width: 330px;
+  margin-left: 9px;
+  margin-top: -10px;
+  top: 25px;
+  border: 2px solid rgb(255, 255, 255);
+  position: fixed;
+  display: flex;
+  background-color: var(--primary);
+  font-size: 12px;
+  align-items: top;
+  border-radius: 5px;
+}
+
+.Tots {
+  position: "fixed";
+}
+.reitti {
+  height: 60px;
+  width: 60px;
+  display: flex;
+  border-radius: 5px;
+  border: 1px solid white;
+  justify-items: center;
+  align-items: center;
+  align-content: space-around;
+  margin-top: 10px;
+  margin-left: 10px;
+  position: relative;
+}
+.reittinappi1 {
+  position: relative;
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 60px;
+  height: 60px;
+  align-self: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 16px;
+  display: flex;
+
+  color: white;
+}
+.tiimi {
+  height: 500px;
+  width: 300px;
+  display: flex;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  justify-items: center;
+  align-items: center;
+  margin-top: 0px;
+  margin-left: 0px;
+  position: fixed;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.raami1 {
+  display: flex;
+  margin-top: 30px;
+  margin-left: 25px;
+  height: 500px;
+  width: 300px;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  position: fixed;
+}
+.raami {
+  display: flex;
+  align-self: center;
+  margin-top: 30px;
+  margin-left: 15px;
+  height: 500px;
+  width: 300px;
+  flex-wrap: wrap;
+  align-content: start;
+}
+
+.otsi {
+  position: fixed;
+  font-size: 20px;
+  margin-top: -30px;
+  margin-left: 130px;
+  font-weight: 700;
+  justify-self: center;
+  color: white;
+}
+.reittinappi {
+  width: 60px;
+  height: 60px;
+  /*border: 1px solid rgb(1, 1, 1);*/
+  align-self: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 16px;
+  display: flex;
+  color: white;
+}
+.reittinappiB {
+  margin-top: 0px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 0%;
+  text-align: center;
+  justify-content: center;
+
+  font-weight: 500;
+  font-size: 22px;
+  font-weight: 600;
+  display: flex;
+}
